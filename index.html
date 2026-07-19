@@ -10,46 +10,55 @@
 </head>
 <body>
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
+    <!-- ========== HEADER ========== -->
+    <header class="navbar">
         <div class="container nav-flex">
             <div class="logo">
                 <i class="fas fa-hotel"></i>
                 <span>Al Rayyan</span>
+                <small style="font-size: 0.7rem; color: #b78c6a; font-weight: 400;">Girls Hostel</small>
             </div>
             <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="rooms.html">Rooms</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="reviews.html">Reviews</a></li>  <!-- NEW -->
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
-</ul>
-            <a href="contact.html" class="btn-primary">Book Now</a>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+            <a href="contact.html" class="btn-primary">Book Now <i class="fas fa-arrow-right"></i></a>
         </div>
-    </nav>
+    </header>
 
-    <!-- HERO -->
+    <!-- ========== HERO SECTION ========== -->
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
+                <span class="tag">🏆 Top Rated Hostel 2026</span>
                 <h1>Comfort &amp; <span>Care</span> for Every Student</h1>
-                <p>Al Rayyan Girls Hostel, Westridge Campus — a secure, serene home away from home.</p>
+                <p>Al Rayyan Girls Hostel, Westridge Campus — a secure, serene home away from home. Located in the heart of Rawalpindi.</p>
                 <div class="badge-group">
                     <span class="badge"><i class="fas fa-shield-alt"></i> 24/7 Security</span>
                     <span class="badge"><i class="fas fa-wifi"></i> High-speed WiFi</span>
                     <span class="badge"><i class="fas fa-utensils"></i> Nutritious Meals</span>
+                    <span class="badge"><i class="fas fa-bus"></i> Transport Access</span>
                 </div>
-                <a href="rooms.html" class="btn-primary" style="margin-top: 2rem; display: inline-block;">Explore Rooms →</a>
+                <div class="hero-buttons">
+                    <a href="rooms.html" class="btn-primary">Explore Rooms →</a>
+                    <a href="contact.html" class="btn-outline"><i class="fas fa-phone"></i> Contact Us</a>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="https://lh5.googleusercontent.com/p/AF1QipO0nlCBCm8aYZJEY6yQp2s22uf0oQvMRcK9VY1g=w408-h306-k-no" alt="Al Rayyan Girls Hostel" />
+                <img src="https://lh5.googleusercontent.com/p/AF1QipO0nlCBCm8aYZJEY6yQp2s22uf0oQvMRcK9VY1g=w408-h306-k-no" alt="Al Rayyan Girls Hostel Front View" />
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i> 4.8 ★ (127 reviews)
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- QUICK INFO -->
+    <!-- ========== QUICK INFO ========== -->
     <section class="quick-info">
         <div class="container">
             <div class="info-cards">
@@ -69,23 +78,101 @@
                     <i class="fas fa-clock"></i>
                     <h3>Office Hours</h3>
                     <p>Mon–Sat: 8:00 AM – 8:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Capacity</h3>
+                    <p>50+ Students</p>
+                    <p>20+ Rooms Available</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ========== FEATURES ========== -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose <span>Al Rayyan</span></h2>
+            <p class="section-subtitle">We provide the best facilities for your comfortable stay</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>24/7 Security</h3>
+                    <p>CCTV surveillance, security guards, and biometric access for complete safety.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h3>High-Speed Internet</h3>
+                    <p>100 Mbps fiber optic WiFi for seamless online learning and entertainment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Healthy Meals</h3>
+                    <p>Nutritious, home-cooked meals with a weekly menu plan for balanced diet.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Study Lounge</h3>
+                    <p>Quiet, dedicated study areas with natural light and comfortable seating.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tshirt"></i></div>
+                    <h3>Laundry Service</h3>
+                    <p>On-site laundry facilities for hassle-free living experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Health &amp; Wellness</h3>
+                    <p>Regular health check-ups, first-aid availability, and emergency support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
-        <div class="container footer-flex">
-            <p>&copy; 2026 Al Rayyan Girls Hostel · Westridge Campus</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><i class="fas fa-hotel"></i> Al Rayyan Girls Hostel</h4>
+                    <p>Westridge Campus, Rawalpindi<br />Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@alrayyanhostel.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://www.google.com/maps/place/Al+Rayyan+Girls+Hostel,+Westridge+Campus./@33.6043833,73.0169,18.8z/data=!4m6!3m5!1s0x38df95eaf22fa239:0xb1cff20471877db0!8m2!3d33.6048902!4d73.017679!16s%2Fg%2F11ndxrj_b3" target="_blank" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                            <i class="fas fa-map-marked-alt"></i> Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Al Rayyan Girls Hostel · All Rights Reserved</p>
+                <p>Designed with <i class="fas fa-heart" style="color: #dc3545;"></i> for students</p>
             </div>
         </div>
     </footer>
 
-    <script src="firebase-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

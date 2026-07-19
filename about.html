@@ -7,49 +7,130 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        .about-page {
+            padding: 3rem 0;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-grid img {
+            width: 100%;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .about-stat {
+            text-align: center;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #ece3da;
+        }
+        .about-stat .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #b78c6a;
+        }
+        .about-stat .label {
+            color: #5d5d6e;
+            font-size: 0.9rem;
+        }
+        .about-image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .about-image-grid img {
+            width: 100%;
+            border-radius: 20px;
+            height: 200px;
+            object-fit: cover;
+        }
+        @media (max-width: 820px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar">
+    <header class="navbar">
         <div class="container nav-flex">
             <div class="logo"><i class="fas fa-hotel"></i><span>Al Rayyan</span></div>
-           <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="rooms.html">Rooms</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="reviews.html">Reviews</a></li>  <!-- NEW -->
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
-</ul>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
             <a href="contact.html" class="btn-primary">Book Now</a>
         </div>
-    </nav>
+    </header>
 
     <section class="page-header">
         <div class="container">
-            <h1>About Al Rayyan</h1>
+            <h1>About <span style="color: #b78c6a;">Al Rayyan</span></h1>
             <p>Your home away from home in the heart of Westridge</p>
         </div>
     </section>
 
-    <section class="about-content">
-        <div class="container about-grid">
-            <div>
-                <h2>Our Story</h2>
-                <p>Al Rayyan Girls Hostel was established with a single mission: to provide female students with a safe, comfortable, and nurturing environment where they can focus on their studies and personal growth.</p>
-                <p>Located in the prestigious Westridge Campus area, our hostel offers modern amenities combined with traditional hospitality. We take pride in our 24/7 security, nutritious meals, and supportive community.</p>
-                <h3 style="margin-top: 2rem;">Why Choose Us?</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> Prime location near educational institutions</li>
-                    <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> 24/7 security and CCTV surveillance</li>
-                    <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> High-speed internet and study areas</li>
-                    <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> Healthy, home-cooked meals</li>
-                    <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> Laundry and housekeeping services</li>
-                </ul>
+    <section class="about-page">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Our <span style="color: #b78c6a;">Story</span></h2>
+                    <p style="font-size: 1.1rem; color: #3d3d4a; line-height: 1.8;">Al Rayyan Girls Hostel was established with a single mission: to provide female students with a safe, comfortable, and nurturing environment where they can focus on their studies and personal growth.</p>
+                    <p style="font-size: 1.1rem; color: #3d3d4a; line-height: 1.8; margin-top: 1rem;">Located in the prestigious Westridge Campus area, our hostel offers modern amenities combined with traditional hospitality. We take pride in our 24/7 security, nutritious meals, and supportive community.</p>
+                    
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="number">50+</div>
+                            <div class="label">Students</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="number">20+</div>
+                            <div class="label">Rooms</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="number">4.8★</div>
+                            <div class="label">Rating</div>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 2rem;">Why Choose Us?</h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> Prime location near educational institutions</li>
+                        <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> 24/7 security and CCTV surveillance</li>
+                        <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> High-speed internet and study areas</li>
+                        <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> Healthy, home-cooked meals</li>
+                        <li style="margin: 0.8rem 0;"><i class="fas fa-check-circle" style="color: #b78c6a; margin-right: 10px;"></i> Laundry and housekeeping services</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipP11d1fwvstMW1UIMQwa3bWK2eP2-G4b6nRc0c=w408-h306-k-no" alt="Hostel Common Area" />
+                </div>
             </div>
-            <div>
-                <img src="https://lh5.googleusercontent.com/p/AF1QipP11d1fwvstMW1UIMQwa3bWK2eP2-G4b6nRc0c=w408-h306-k-no" alt="Hostel common area" style="width: 100%; border-radius: 28px; box-shadow: 0 12px 30px rgba(0,0,0,0.08);" />
+
+            <div class="about-image-grid">
+                <img src="https://lh5.googleusercontent.com/p/AF1QipO0nlCBCm8aYZJEY6yQp2s22uf0oQvMRcK9VY1g=w408-h306-k-no" alt="Hostel Front" />
+                <img src="https://lh5.googleusercontent.com/p/AF1QipN7nWC2tV9dugAGmDlTEWJLLcms3bHjdtKLuxU=w408-h306-k-no" alt="Hostel Dining" />
             </div>
         </div>
     </section>
@@ -65,7 +146,6 @@
         </div>
     </footer>
 
-    <script src="firebase-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

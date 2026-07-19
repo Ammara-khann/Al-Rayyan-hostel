@@ -1,18 +1,19 @@
-// Firebase configuration (replace with your own)
-// This file is ready for Firebase integration
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Contact form handling
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const status = document.getElementById('formStatus');
-            status.textContent = '✅ Message sent successfully! (Firebase ready)';
-            status.style.color = '#b78c6a';
-            form.reset();
+// ========== Smooth Scrolling ==========
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
-    }
-
-    console.log('🔥 Al Rayyan Hostel · Firebase ready');
+    });
 });
+
+// ========== Mobile Menu Toggle ==========
+// (Add if needed)
+
+// ========== Form Handling ==========
+// Contact form will be handled in contact.html
+
+console.log('🏨 Al Rayyan Girls Hostel Website Loaded!');
+console.log('📍 Westridge Campus, Rawalpindi');
+console.log('📞 +92 300 1234567');
