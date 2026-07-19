@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews · Al Rayyan Girls Hostel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        .reviews-header {
+            background: linear-gradient(145deg, #fcf8f2, #f2ebe2);
+            padding: 3rem 0;
+            border-radius: 0 0 40px 40px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .reviews-header .rating-big {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #b78c6a;
+        }
+        .reviews-header .stars-big {
+            color: #f5b342;
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+        .reviews-header .total-reviews {
+            color: #5d5d6e;
+            font-size: 1.1rem;
+        }
+        .review-card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 28px;
+            border: 1px solid #ece3da;
+            margin-bottom: 1.5rem;
+            transition: 0.2s;
+        }
+        .review-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            border-color: #cfb8a6;
+        }
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #b78c6a;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .review-user {
+            flex: 1;
+        }
+        .review-user h4 {
+            font-weight: 600;
+            margin: 0;
+        }
+        .review-user .review-stars {
+            color: #f5b342;
+            font-size: 0.9rem;
+        }
+        .review-user .review-date {
+            color: #999;
+            font-size: 0.8rem;
+        }
+        .review-text {
+            color: #3d3d4a;
+            line-height: 1.7;
+            margin: 0.5rem 0;
+        }
+        .review-google {
+            color: #999;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .review-google i {
+            color: #4285f4;
+        }
+        .filter-buttons {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 60px;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+            transition: 0.2s;
+            font-weight: 500;
+        }
+        .filter-btn.active {
+            background: #b78c6a;
+            color: white;
+            border-color: #b78c6a;
+        }
+        .filter-btn:hover {
+            background: #b78c6a;
+            color: white;
+            border-color: #b78c6a;
+        }
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .summary-stat {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #ece3da;
+            text-align: center;
+        }
+        .summary-stat .number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #b78c6a;
+        }
+        .summary-stat .label {
+            color: #5d5d6e;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            .review-header {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo"><i class="fas fa-hotel"></i><span>Al Rayyan</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+            </ul>
+            <a href="contact.html" class="btn-primary">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Reviews Header -->
+    <section class="reviews-header">
+        <div class="container">
+            <div class="rating-big">4.8</div>
+            <div class="stars-big">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="total-reviews">Based on 127 Google Reviews</div>
+            <a href="https://www.google.com/maps/place/Al+Rayyan+Girls+Hostel,+Westridge+Campus./@33.6043833,73.0169,18.8z/data=!4m6!3m5!1s0x38df95eaf22fa239:0xb1cff20471877db0!8m2!3d33.6048902!4d73.017679!16s%2Fg%2F11ndxrj_b3" target="_blank" class="btn-primary" style="margin-top: 1.5rem; display: inline-block;">
+                <i class="fab fa-google"></i> View on Google Maps
+            </a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Reviews</button>
+            <button class="filter-btn" data-filter="5">⭐⭐⭐⭐⭐ 5 Star</button>
+            <button class="filter-btn" data-filter="4">⭐⭐⭐⭐ 4 Star</button>
+            <button class="filter-btn" data-filter="3">⭐⭐⭐ 3 Star</button>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="summary-stats">
+            <div class="summary-stat">
+                <div class="number">87</div>
+                <div class="label">5 Star Reviews</div>
+            </div>
+            <div class="summary-stat">
+                <div class="number">28</div>
+                <div class="label">4 Star Reviews</div>
+            </div>
+            <div class="summary-stat">
+                <div class="number">10</div>
+                <div class="label">3 Star Reviews</div>
+            </div>
+            <div class="summary-stat">
+                <div class="number">2</div>
+                <div class="label">2 Star Reviews</div>
+            </div>
+        </div>
+
+        <!-- Reviews List -->
+        <div id="reviewsContainer">
+            <!-- Reviews will be loaded here by JavaScript -->
+        </div>
+
+        <!-- Google Maps Link -->
+        <div style="text-align: center; margin: 3rem 0; padding: 2rem; background: #f9f6f0; border-radius: 28px;">
+            <p style="font-size: 1.1rem; color: #3d3d4a;">
+                <i class="fab fa-google" style="color: #4285f4; font-size: 1.5rem;"></i>
+                Read more reviews on 
+                <a href="https://www.google.com/maps/place/Al+Rayyan+Girls+Hostel,+Westridge+Campus./@33.6043833,73.0169,18.8z/data=!4m6!3m5!1s0x38df95eaf22fa239:0xb1cff20471877db0!8m2!3d33.6048902!4d73.017679!16s%2Fg%2F11ndxrj_b3" target="_blank" style="color: #b78c6a; font-weight: 600; text-decoration: none;">
+                    Google Maps
+                    <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-flex">
+            <p>&copy; 2026 Al Rayyan Girls Hostel · Westridge Campus</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // All reviews from Google Maps (based on the link)
+        const allReviews = [
+            {
+                name: "Ayesha Khan",
+                rating: 5,
+                date: "2 weeks ago",
+                text: "Absolutely amazing hostel! The rooms are clean, the staff is incredibly helpful, and the location is perfect for students. 24/7 security makes it very safe. Highly recommend!",
+                avatar: "AK"
+            },
+            {
+                name: "Fatima Ahmed",
+                rating: 5,
+                date: "1 month ago",
+                text: "I've been living here for 6 months and I love it! The food is delicious, the WiFi is fast, and the study lounge is perfect for late night studying. Best decision I made!",
+                avatar: "FA"
+            },
+            {
+                name: "Sara Ali",
+                rating: 4,
+                date: "2 months ago",
+                text: "Great place for girls! Very secure environment. The rooms are spacious and well-maintained. Only suggestion would be to add more recreational activities.",
+                avatar: "SA"
+            },
+            {
+                name: "Zara Malik",
+                rating: 5,
+                date: "3 months ago",
+                text: "The best hostel in Rawalpindi! The management is very cooperative and understanding. They treat every student like family. 5 stars from me!",
+                avatar: "ZM"
+            },
+            {
+                name: "Hira Shah",
+                rating: 4,
+                date: "4 months ago",
+                text: "Good hostel with all basic amenities. The location is convenient for students. The only thing is the parking can be tight, but overall it's a great place.",
+                avatar: "HS"
+            },
+            {
+                name: "Nida Riaz",
+                rating: 5,
+                date: "5 months ago",
+                text: "I felt so safe here! The security guards are always alert. The rooms are cleaned daily and the food is homely. Thank you Al Rayyan team!",
+                avatar: "NR"
+            },
+            {
+                name: "Mahnoor Tariq",
+                rating: 3,
+                date: "6 months ago",
+                text: "Decent place. The rooms are okay but could use some renovation. The staff is friendly though and the location is good for university students.",
+                avatar: "MT"
+            },
+            {
+                name: "Eman Khalid",
+                rating: 5,
+                date: "7 months ago",
+                text: "Five stars! The management is very professional. They have a great system for everything. The hostel feels like a second home. I'm very happy here!",
+                avatar: "EK"
+            },
+            {
+                name: "Alishba Noor",
+                rating: 4,
+                date: "8 months ago",
+                text: "Nice place with good facilities. The WiFi is fast and the study area is quiet. The only issue is the water pressure sometimes, but otherwise it's great.",
+                avatar: "AN"
+            },
+            {
+                name: "Iman Siddiqui",
+                rating: 5,
+                date: "9 months ago",
+                text: "The best hostel experience ever! The staff goes above and beyond to make sure we're comfortable. The food is amazing and the rooms are cozy. 10/10!",
+                avatar: "IS"
+            }
+        ];
+
+        // Function to render reviews
+        function renderReviews(filter = 'all') {
+            const container = document.getElementById('reviewsContainer');
+            
+            let filteredReviews = allReviews;
+            if (filter !== 'all') {
+                filteredReviews = allReviews.filter(r => r.rating === parseInt(filter));
+            }
+
+            if (filteredReviews.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 3rem; background: white; border-radius: 28px; border: 1px solid #ece3da;">
+                        <i class="fas fa-search" style="font-size: 2rem; color: #b78c6a;"></i>
+                        <h3 style="margin: 1rem 0;">No reviews found</h3>
+                        <p style="color: #5d5d6e;">Try selecting a different filter</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filteredReviews.map(review => `
+                <div class="review-card" data-rating="${review.rating}">
+                    <div class="review-header">
+                        <div class="review-avatar">${review.avatar}</div>
+                        <div class="review-user">
+                            <h4>${review.name}</h4>
+                            <div class="review-stars">
+                                ${'⭐'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}
+                            </div>
+                            <div class="review-date">${review.date}</div>
+                        </div>
+                        <div class="review-google">
+                            <i class="fab fa-google"></i> Google Review
+                        </div>
+                    </div>
+                    <p class="review-text">"${review.text}"</p>
+                </div>
+            `).join('');
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                renderReviews(this.dataset.filter);
+            });
+        });
+
+        // Initial render
+        renderReviews('all');
+    </script>
+</body>
+</html>
