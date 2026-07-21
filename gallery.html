@@ -82,7 +82,13 @@
 
     <header class="navbar">
         <div class="container nav-flex">
-            <div class="logo"><i class="fas fa-hotel"></i><span>Al Rayyan</span></div>
+            <a href="index.html" class="logo" style="text-decoration:none;">
+                <i class="fas fa-hotel"></i>
+                <div>
+                    <span>Al Rayyan</span>
+                    <small>Girls Hostel</small>
+                </div>
+            </a>
             <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -101,7 +107,7 @@
 
     <section class="page-header">
         <div class="container">
-            <h1>Our <span style="color: #b78c6a;">Gallery</span></h1>
+            <h1>Our <span style="color: var(--color-gold);">Gallery</span></h1>
             <p>Take a visual tour of our beautiful hostel</p>
         </div>
     </section>
@@ -109,58 +115,59 @@
     <section class="gallery-page">
         <div class="container">
             <div class="gallery-grid-full">
-                <!-- Featured Image (from the hostel's Google Business listing) -->
                 <div class="gallery-item-full featured">
-                    <img src="https://lh5.googleusercontent.com/p/AF1QipO0nlCBCm8aYZJEY6yQp2s22uf0oQvMRcK9VY1g=w800-h600-k-no" alt="Al Rayyan Girls Hostel" />
+                    <img src="images/exterior.jpg" alt="Hostel Exterior" />
                     <div class="overlay">
-                        <h3>🏛️ Al Rayyan Girls Hostel</h3>
-                        <p>From our Google Business listing</p>
+                        <h3>🏛️ Hostel Exterior</h3>
+                        <p>Secure entrance and building front</p>
                     </div>
                 </div>
 
                 <div class="gallery-item-full">
-                    <img src="https://lh5.googleusercontent.com/p/AF1QipP11d1fwvstMW1UIMQwa3bWK2eP2-G4b6nRc0c=w800-h600-k-no" alt="Al Rayyan Girls Hostel view 2" />
+                    <img src="images/tv-lounge.jpg" alt="TV Lounge" />
                     <div class="overlay">
-                        <h3>🏢 The Hostel</h3>
-                        <p>From our Google Business listing</p>
+                        <h3>📺 TV Lounge</h3>
+                        <p>Relax and unwind with fellow residents</p>
                     </div>
                 </div>
 
                 <div class="gallery-item-full">
-                    <img src="https://lh5.googleusercontent.com/p/AF1QipN7nWC2tV9dugAGmDlTEWJLLcms3bHjdtKLuxU=w800-h600-k-no" alt="Al Rayyan Girls Hostel view 3" />
+                    <img src="images/dining.jpg" alt="Kitchen & Dining" />
                     <div class="overlay">
-                        <h3>🏢 The Hostel</h3>
-                        <p>From our Google Business listing</p>
+                        <h3>🍽️ Kitchen &amp; Dining</h3>
+                        <p>Home-cooked meals served daily</p>
                     </div>
                 </div>
 
-                <!-- More real photos go here — see the note below on how to add them -->
-                <div class="gallery-item-full coming-soon">
-                    <div>
-                        <i class="fas fa-bed"></i>
-                        <strong>Rooms</strong>
-                        Photos coming soon
+                <div class="gallery-item-full">
+                    <img src="images/room-extra.jpg" alt="Bedroom" />
+                    <div class="overlay">
+                        <h3>🛏️ Comfortable Rooms</h3>
+                        <p>Cozy and well-furnished</p>
                     </div>
                 </div>
-                <div class="gallery-item-full coming-soon">
-                    <div>
-                        <i class="fas fa-utensils"></i>
-                        <strong>Dining Area</strong>
-                        Photos coming soon
+                <div class="gallery-item-full">
+                    <img src="images/study.jpg" alt="Study Area" />
+                    <div class="overlay">
+                        <h3>📚 Study Area</h3>
+                        <p>Quiet space to focus on academics</p>
                     </div>
                 </div>
-                <div class="gallery-item-full coming-soon">
-                    <div>
-                        <i class="fas fa-couch"></i>
-                        <strong>Common Room</strong>
-                        Photos coming soon
+                <div class="gallery-item-full">
+                    <img src="images/common-area.jpg" alt="Common Area" />
+                    <div class="overlay">
+                        <h3>🛋️ Common Area</h3>
+                        <p>Shared space for students to connect</p>
+                    </div>
+                </div>
+                <div class="gallery-item-full">
+                    <img src="images/washroom.jpg" alt="Washroom" />
+                    <div class="overlay">
+                        <h3>🚿 Washroom</h3>
+                        <p>Clean, well-maintained facilities</p>
                     </div>
                 </div>
             </div>
-
-            <p style="text-align:center; color: var(--color-text-muted); margin-top: 2.5rem; font-size: 0.95rem;">
-                📸 More real photos coming soon — see the note in the chat for how to add them yourself in under a minute.
-            </p>
         </div>
     </section>
 

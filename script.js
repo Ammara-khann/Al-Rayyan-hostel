@@ -31,4 +31,4 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 console.log('🏨 Al Rayyan Girls Hostel Website Loaded!');
 console.log('📍 Westridge Campus, Rawalpindi');
-console.log('📞 +92 312 5303149');
+console.log('📞 +92 300 1234567');
