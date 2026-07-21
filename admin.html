@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
     <style>
         .admin-panel {
             padding: 2rem 0;
@@ -125,6 +128,9 @@
     <nav class="navbar">
         <div class="container nav-flex">
             <div class="logo"><i class="fas fa-hotel"></i><span>Al Rayyan</span></div>
+            <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
@@ -228,13 +234,28 @@
         const ADMIN_PASSWORD = 'admin123';
         let bookings = [];
 
-        // Sample data (will be stored in localStorage)
-        function loadBookings() {
+        // Loads real bookings from Firestore when available; falls back to
+        // localStorage (and a few sample rows) so the panel still works
+        // if Firestore isn't reachable.
+        async function loadBookings() {
+            if (db) {
+                try {
+                    const snapshot = await db.collection('bookings').orderBy('id', 'desc').get();
+                    if (!snapshot.empty) {
+                        bookings = snapshot.docs.map(doc => doc.data());
+                        updateDashboard();
+                        return;
+                    }
+                } catch (err) {
+                    console.warn('⚠️ Could not load from Firestore, using local data instead:', err);
+                }
+            }
+
             const saved = localStorage.getItem('bookings');
             if (saved) {
                 bookings = JSON.parse(saved);
             } else {
-                // Sample bookings
+                // Sample bookings shown only when there's no real data yet
                 bookings = [
                     {
                         id: 1,
@@ -307,20 +328,34 @@
             `).join('');
         }
 
-        function updateStatus(id, status) {
+        async function updateStatus(id, status) {
             const booking = bookings.find(b => b.id === id);
             if (booking) {
                 booking.status = status;
                 localStorage.setItem('bookings', JSON.stringify(bookings));
                 updateDashboard();
+                if (db) {
+                    try {
+                        await db.collection('bookings').doc(String(id)).update({ status });
+                    } catch (err) {
+                        console.warn('⚠️ Could not sync status to Firestore:', err);
+                    }
+                }
             }
         }
 
-        function deleteBooking(id) {
+        async function deleteBooking(id) {
             if (confirm('Are you sure you want to delete this booking?')) {
                 bookings = bookings.filter(b => b.id !== id);
                 localStorage.setItem('bookings', JSON.stringify(bookings));
                 updateDashboard();
+                if (db) {
+                    try {
+                        await db.collection('bookings').doc(String(id)).delete();
+                    } catch (err) {
+                        console.warn('⚠️ Could not delete from Firestore:', err);
+                    }
+                }
             }
         }
 

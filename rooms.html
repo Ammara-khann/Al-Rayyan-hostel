@@ -42,7 +42,7 @@
         .room-card-full .room-info .price {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #b78c6a;
+            color: var(--color-gold);
         }
         .room-card-full .room-info .price span {
             font-size: 1rem;
@@ -58,7 +58,7 @@
             margin: 0.5rem 0;
         }
         .room-card-full .room-info ul li i {
-            color: #b78c6a;
+            color: var(--color-gold);
             margin-right: 10px;
             width: 20px;
         }
@@ -73,6 +73,9 @@
     <header class="navbar">
         <div class="container nav-flex">
             <div class="logo"><i class="fas fa-hotel"></i><span>Al Rayyan</span></div>
+            <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -88,7 +91,7 @@
 
     <section class="page-header">
         <div class="container">
-            <h1>Our <span style="color: #b78c6a;">Rooms</span></h1>
+            <h1>Our <span style="color: var(--color-gold);">Rooms</span></h1>
             <p>Comfortable, secure, and designed for focused living</p>
         </div>
     </section>
@@ -98,7 +101,7 @@
             <div class="rooms-grid">
                 <!-- Standard Room -->
                 <div class="room-card-full">
-                    <img src="https://lh5.googleusercontent.com/p/AF1QipO0nlCBCm8aYZJEY6yQp2s22uf0oQvMRcK9VY1g=w408-h306-k-no" alt="Standard Room" />
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipO0nlCBCm8aYZJEY6yQp2s22uf0oQvMRcK9VY1g=w800-h600-k-no" alt="Standard Room" />
                     <div class="room-info">
                         <h3>🛏️ Standard Room</h3>
                         <p style="color: #5d5d6e;">Shared room with 2–3 beds, study desk, and attached bathroom.</p>
@@ -115,7 +118,7 @@
 
                 <!-- Premium Room -->
                 <div class="room-card-full">
-                    <img src="https://lh5.googleusercontent.com/p/AF1QipP11d1fwvstMW1UIMQwa3bWK2eP2-G4b6nRc0c=w408-h306-k-no" alt="Premium Room" />
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipP11d1fwvstMW1UIMQwa3bWK2eP2-G4b6nRc0c=w800-h600-k-no" alt="Premium Room" />
                     <div class="room-info">
                         <h3>⭐ Premium Room</h3>
                         <p style="color: #5d5d6e;">Private room with double bed, study area, and modern furnishings.</p>
@@ -132,7 +135,7 @@
 
                 <!-- Executive Suite -->
                 <div class="room-card-full">
-                    <img src="https://lh5.googleusercontent.com/p/AF1QipN7nWC2tV9dugAGmDlTEWJLLcms3bHjdtKLuxU=w408-h306-k-no" alt="Executive Suite" />
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipN7nWC2tV9dugAGmDlTEWJLLcms3bHjdtKLuxU=w800-h600-k-no" alt="Executive Suite" />
                     <div class="room-info">
                         <h3>👑 Executive Suite</h3>
                         <p style="color: #5d5d6e;">Spacious suite with living area, study corner, and private balcony.</p>

@@ -18,7 +18,7 @@
         .reviews-header .rating-big {
             font-size: 4rem;
             font-weight: 700;
-            color: #b78c6a;
+            color: var(--color-gold);
         }
         .reviews-header .stars-big {
             color: #f5b342;
@@ -51,7 +51,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: #b78c6a;
+            background: var(--color-gold);
             color: white;
             display: flex;
             align-items: center;
@@ -105,14 +105,14 @@
             font-weight: 500;
         }
         .filter-btn.active {
-            background: #b78c6a;
+            background: var(--color-gold);
             color: white;
-            border-color: #b78c6a;
+            border-color: var(--color-gold);
         }
         .filter-btn:hover {
-            background: #b78c6a;
+            background: var(--color-gold);
             color: white;
-            border-color: #b78c6a;
+            border-color: var(--color-gold);
         }
         .summary-stats {
             display: grid;
@@ -130,7 +130,7 @@
         .summary-stat .number {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #b78c6a;
+            color: var(--color-gold);
         }
         .summary-stat .label {
             color: #5d5d6e;
@@ -148,6 +148,9 @@
     <nav class="navbar">
         <div class="container nav-flex">
             <div class="logo"><i class="fas fa-hotel"></i><span>Al Rayyan</span></div>
+            <button class="nav-toggle" onclick="toggleNav(this)" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -218,7 +221,7 @@
             <p style="font-size: 1.1rem; color: #3d3d4a;">
                 <i class="fab fa-google" style="color: #4285f4; font-size: 1.5rem;"></i>
                 Read more reviews on 
-                <a href="https://www.google.com/maps/place/Al+Rayyan+Girls+Hostel,+Westridge+Campus./@33.6043833,73.0169,18.8z/data=!4m6!3m5!1s0x38df95eaf22fa239:0xb1cff20471877db0!8m2!3d33.6048902!4d73.017679!16s%2Fg%2F11ndxrj_b3" target="_blank" style="color: #b78c6a; font-weight: 600; text-decoration: none;">
+                <a href="https://www.google.com/maps/place/Al+Rayyan+Girls+Hostel,+Westridge+Campus./@33.6043833,73.0169,18.8z/data=!4m6!3m5!1s0x38df95eaf22fa239:0xb1cff20471877db0!8m2!3d33.6048902!4d73.017679!16s%2Fg%2F11ndxrj_b3" target="_blank" style="color: var(--color-gold); font-weight: 600; text-decoration: none;">
                     Google Maps
                     <i class="fas fa-external-link-alt" style="font-size: 0.8rem;"></i>
                 </a>
@@ -324,7 +327,7 @@
             if (filteredReviews.length === 0) {
                 container.innerHTML = `
                     <div style="text-align: center; padding: 3rem; background: white; border-radius: 28px; border: 1px solid #ece3da;">
-                        <i class="fas fa-search" style="font-size: 2rem; color: #b78c6a;"></i>
+                        <i class="fas fa-search" style="font-size: 2rem; color: var(--color-gold);"></i>
                         <h3 style="margin: 1rem 0;">No reviews found</h3>
                         <p style="color: #5d5d6e;">Try selecting a different filter</p>
                     </div>
